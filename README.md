@@ -1,38 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# QR Code Generator
 
-## Getting Started
+A simple web application to generate QR codes with optional titles and logos. This project is built with Next.js and styled using Tailwind CSS. The QR codes can be generated, previewed, and downloaded in PNG format.
 
-First, run the development server:
+## Purpose
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+The purpose of this application is to provide a user-friendly interface for generating QR codes. Users can enter text to encode, optionally add a title, and upload a logo to embed in the QR code. The generated QR code can be downloaded for use in various applications such as marketing materials, event tickets, and more.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Generate QR codes from user-provided text.
+- Add an optional title above the QR code.
+- Embed an optional logo in the center of the QR code.
+- Preview the generated QR code.
+- Download the QR code as a PNG image with a filename that includes the current date and time.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Installation
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/your-username/qr-generator-app.git
+   cd qr-generator-app
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
 
-## Learn More
+3. **Run the development server:**
+   ```sh
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Enter the text:**
+   - Type the text you want to encode into a QR code in the input field.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. **Add a title (optional):**
+   - Type a title to be displayed above the QR code in the optional title input field.
 
-## Deploy on Vercel
+3. **Upload a logo (optional):**
+   - Upload an image file to be embedded in the center of the QR code.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Generate the QR code:**
+   - Click the "Generate QR Code" button to generate the QR code with the provided text, title, and logo.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+5. **Download the QR code:**
+   - Click the "Download QR Code" button to download the generated QR code as a PNG file. The file will be named `QR_YYYY-MM-DD_HH-MM-SS.png`, where `YYYY-MM-DD_HH-MM-SS` is the current date and time.
+
+## Deployment
+
+The application can be easily deployed to Vercel, a platform for static sites and serverless functions.
+
+1. **Install Vercel CLI:**
+   ```sh
+   npm install -g vercel
+   ```
+
+2. **Log in to Vercel:**
+   ```sh
+   vercel login
+   ```
+
+3. **Deploy the application:**
+   ```sh
+   vercel
+   ```
+   Follow the prompts to link or create a new Vercel project and deploy the application. Vercel will provide a URL where your app is live.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- [Next.js](https://nextjs.org/) - The React Framework.
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework.
+- [QRCode](https://github.com/soldair/node-qrcode) - QR code generator library.
